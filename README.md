@@ -1,2 +1,12 @@
-# algorithm_study
-This is an auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
+#
+# 백준, 프로그래머스 문제 풀이 목록
+## 📚 백준
+### 🚀 Bronze
+| 문제번호 | 링크 |
+| ----- | ----- |
+|10430. 나머지|[링크](./%EB%B0%B1%EC%A4%80/Bronze/10430.%E2%80%85%EB%82%98%EB%A8%B8%EC%A7%80/README.md)|
+|10810. 공 넣기|[링크](./%EB%B0%B1%EC%A4%80/Bronze/10810.%E2%80%85%EA%B3%B5%E2%80%85%EB%84%A3%EA%B8%B0/README.md)|
+|10818. 최소， 최대|[링크](./%EB%B0%B1%EC%A4%80/Bronze/10818.%E2%80%85%EC%B5%9C%EC%86%8C%EF%BC%8C%E2%80%85%EC%B5%9C%EB%8C%80/README.md)|
+|11021. A＋B － 7|[링크](./%EB%B0%B1%EC%A4%80/Bronze/11021.%E2%80%85A%EF%BC%8BB%E2%80%85%EF%BC%8D%E2%80%857/A%EF%BC%8BB%E2%80%85%EF%BC%8D%E2%80%857.js)|
+|2743. 단어 길이 재기|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2743.%E2%80%85%EB%8B%A8%EC%96%B4%E2%80%85%EA%B8%B8%EC%9D%B4%E2%80%85%EC%9E%AC%EA%B8%B0/README.md)|
+|9086. 문자열|[링크](./%EB%B0%B1%EC%A4%80/Bronze/9086.%E2%80%85%EB%AC%B8%EC%9E%90%EC%97%B4/%EB%AC%B8%EC%9E%90%EC%97%B4.js)|
