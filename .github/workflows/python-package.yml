@@ -8,6 +8,7 @@ on:
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -16,7 +17,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    
+
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
       with:
@@ -30,3 +31,21 @@ jobs:
     - name: Run upload.py
       run: |
         python update.py
+
+    - name: Commit changes
+      run: |
+        git config --global user.name 'yurim1205'
+        git config --global user.email 'eoulim3237@naver.com'
+        git add -A
+        git commit -am "auto update README.md" || echo "No changes to commit"
+
+    - name: Pull before push (avoid conflicts)
+      run: |
+        git pull origin main --rebase
+
+    - name: Push changes
+      run: |
+        git remote set-url origin https://github.com/yurim1205/algorithm_study.git
+        git push origin main
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
