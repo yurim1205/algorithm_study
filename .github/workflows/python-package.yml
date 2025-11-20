@@ -16,7 +16,10 @@ jobs:
         python-version: ["3.9", "3.10", "3.11"]
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0   # ⭐ 깃 히스토리 전체를 가져옴 (충돌 해결 핵심)
 
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
@@ -28,9 +31,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install python-leetcode
 
-    - name: Run upload.py
-      run: |
-        python update.py
+    - name: Run update.py
+      run: python update.py
 
     - name: Commit changes
       run: |
@@ -39,13 +41,13 @@ jobs:
         git add -A
         git commit -am "auto update README.md" || echo "No changes to commit"
 
+    - name: Setup remote
+      run: git remote set-url origin https://github.com/yurim1205/algorithm_study.git
+
     - name: Pull before push (avoid conflicts)
-      run: |
-        git pull origin main --rebase
+      run: git pull origin main --rebase
 
     - name: Push changes
-      run: |
-        git remote set-url origin https://github.com/yurim1205/algorithm_study.git
-        git push origin main
+      run: git push origin main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
